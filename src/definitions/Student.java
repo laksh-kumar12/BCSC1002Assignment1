@@ -6,6 +6,8 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+
 public class Student {
     private final byte MAX_NUMBER_OF_ISSUED_BOOKS = 10;
     private String firstName;
@@ -79,5 +81,17 @@ public class Student {
         this.studentRollNumber = studentRollNumber;
         this.numberOfBookIssued = 0;
         this.issuedBooks = new Book[MAX_NUMBER_OF_ISSUED_BOOKS];
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName='" + firstName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", studentRollNumber=" + studentRollNumber +
+                ", numberOfBookIssued=" + numberOfBookIssued +
+                ", issuedBooks=" + Arrays.toString(issuedBooks) +
+                '}';
     }
 }
