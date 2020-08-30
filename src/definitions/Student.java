@@ -124,6 +124,7 @@ public class Student {
      */
     public void issueBook(String bookName, String authorName) {
         System.out.println("Your book has been issued.");
+        numberOfBookIssued++;
     }
 
     /**
@@ -134,6 +135,7 @@ public class Student {
      */
     public void returnBook(String bookName, String authorName) {
         System.out.println("Your book has been returned.");
+        numberOfBookIssued--;
     }
 
     /**
