@@ -7,6 +7,7 @@
 package definitions;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Student {
     private final byte MAX_NUMBER_OF_ISSUED_BOOKS = 10;
@@ -93,5 +94,25 @@ public class Student {
                 ", numberOfBookIssued=" + numberOfBookIssued +
                 ", issuedBooks=" + Arrays.toString(issuedBooks) +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return studentRollNumber == student.studentRollNumber &&
+                numberOfBookIssued == student.numberOfBookIssued &&
+                firstName.equals(student.firstName) &&
+                middleName.equals(student.middleName) &&
+                lastName.equals(student.lastName) &&
+                Arrays.equals(issuedBooks, student.issuedBooks);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(firstName, middleName, lastName, studentRollNumber, numberOfBookIssued);
+        result = 31 * result + Arrays.hashCode(issuedBooks);
+        return result;
     }
 }
