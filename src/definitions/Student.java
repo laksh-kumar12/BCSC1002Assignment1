@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Student {
-    private final byte MAX_NUMBER_OF_ISSUED_BOOKS = 10;
+    private final byte MAX_NUMBER_OF_ISSUED_BOOKS = 5;
     private String firstName;
     private String middleName;
     private String lastName;
