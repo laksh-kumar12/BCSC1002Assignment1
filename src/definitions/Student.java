@@ -18,54 +18,6 @@ public class Student {
     private int numberOfBookIssued;
     private Book[] issuedBooks;
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public long getStudentRollNumber() {
-        return studentRollNumber;
-    }
-
-    public int getNumberOfBookIssued() {
-        return numberOfBookIssued;
-    }
-
-    public Book[] getBookIssued() {
-        return issuedBooks.clone();
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public void setStudentRollNumber(long studentRollNumber) {
-        this.studentRollNumber = studentRollNumber;
-    }
-
-    public void setNumberOfBookIssued(int numberOfBookIssued) {
-        this.numberOfBookIssued = numberOfBookIssued;
-    }
-
-    public void setIssuedBooks(Book[] issuedBooks) {
-        this.issuedBooks = issuedBooks;
-    }
-
     public Student(String firstName, String middleName, String lastName, long studentRollNumber) {
         this.firstName = firstName;
         this.middleName = middleName;
@@ -82,6 +34,54 @@ public class Student {
         this.studentRollNumber = studentRollNumber;
         this.numberOfBookIssued = 0;
         this.issuedBooks = new Book[MAX_NUMBER_OF_ISSUED_BOOKS];
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public long getStudentRollNumber() {
+        return studentRollNumber;
+    }
+
+    public void setStudentRollNumber(long studentRollNumber) {
+        this.studentRollNumber = studentRollNumber;
+    }
+
+    public int getNumberOfBookIssued() {
+        return numberOfBookIssued;
+    }
+
+    public void setNumberOfBookIssued(int numberOfBookIssued) {
+        this.numberOfBookIssued = numberOfBookIssued;
+    }
+
+    public Book[] getBookIssued() {
+        return issuedBooks.clone();
+    }
+
+    public void setIssuedBooks(Book[] issuedBooks) {
+        this.issuedBooks = issuedBooks;
     }
 
     @Override
@@ -123,11 +123,22 @@ public class Student {
      * @param authorName The name of author of the book to be issued.
      */
     public void issueBook(String bookName, String authorName) {
-        if (this.numberOfBookIssued == MAX_NUMBER_OF_ISSUED_BOOKS) {
+        if (numberOfBookIssued == MAX_NUMBER_OF_ISSUED_BOOKS) {
             System.out.println("You have already issued 5 books. Please return at least 1 book in order to issue a new book.");
         } else {
             System.out.println("Your book has been issued.");
             numberOfBookIssued++;
         }
+    }
+
+    /**
+     * This method returns a book which was issued by the Student.
+     *
+     * @param bookName   The name of the book to be returned.
+     * @param authorName The name of author of the book to be issued.
+     */
+    public void returnBook(String bookName, String authorName) {
+        System.out.println("Your book has been returned.");
+        numberOfBookIssued--;
     }
 }
