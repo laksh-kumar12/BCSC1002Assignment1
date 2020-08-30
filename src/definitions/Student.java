@@ -13,4 +13,28 @@ public class Student {
     private long studentRollNumber;
     private int numberOfBookIssued;
     private Book[] bookIssued;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public long getStudentRollNumber() {
+        return studentRollNumber;
+    }
+
+    public int getNumberOfBookIssued() {
+        return numberOfBookIssued;
+    }
+
+    public Book[] getBookIssued() {
+        return bookIssued.clone();
+    }
 }
