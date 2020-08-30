@@ -115,4 +115,19 @@ public class Student {
         result = 31 * result + Arrays.hashCode(issuedBooks);
         return result;
     }
+
+    /**
+     * This method issues a book for the Student.
+     *
+     * @param bookName   The name of the book to be issued.
+     * @param authorName The name of author of the book to be issued.
+     */
+    public void issueBook(String bookName, String authorName) {
+        if (this.numberOfBookIssued == MAX_NUMBER_OF_ISSUED_BOOKS) {
+            System.out.println("You have already issued 5 books. Please return at least 1 book in order to issue a new book.");
+        } else {
+            System.out.println("Your book has been issued.");
+            numberOfBookIssued++;
+        }
+    }
 }
