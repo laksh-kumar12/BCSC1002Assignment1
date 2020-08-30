@@ -138,8 +138,12 @@ public class Student {
      * @param authorName The name of author of the book to be issued.
      */
     public void returnBook(String bookName, String authorName) {
-        System.out.println("Your book has been returned.");
-        numberOfBookIssued--;
+        if (numberOfBookIssued > 0) {
+            System.out.println("Your book has been returned.");
+            numberOfBookIssued--;
+        } else {
+            System.out.println("You have not issued any book.");
+        }
     }
 
     /**
@@ -148,6 +152,5 @@ public class Student {
     public void showIssuedBooks() {
         System.out.println("List of all your issued books: ");
     }
-
 
 }
