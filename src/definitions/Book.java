@@ -22,4 +22,16 @@ public class Book {
     public String getIsbnNumber() {
         return isbnNumber;
     }
+
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
+    public void setIsbnNumber(String isbnNumber) {
+        this.isbnNumber = isbnNumber;
+    }
 }
