@@ -37,4 +37,28 @@ public class Student {
     public Book[] getBookIssued() {
         return issuedBooks.clone();
     }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setStudentRollNumber(long studentRollNumber) {
+        this.studentRollNumber = studentRollNumber;
+    }
+
+    public void setNumberOfBookIssued(int numberOfBookIssued) {
+        this.numberOfBookIssued = numberOfBookIssued;
+    }
+
+    public void setIssuedBooks(Book[] issuedBooks) {
+        this.issuedBooks = issuedBooks;
+    }
 }
