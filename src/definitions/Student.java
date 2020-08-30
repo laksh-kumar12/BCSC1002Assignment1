@@ -12,7 +12,7 @@ public class Student {
     private String lastName;
     private long studentRollNumber;
     private int numberOfBookIssued;
-    private Book[] bookIssued;
+    private Book[] issuedBooks;
 
     public String getFirstName() {
         return firstName;
@@ -35,6 +35,6 @@ public class Student {
     }
 
     public Book[] getBookIssued() {
-        return bookIssued.clone();
+        return issuedBooks.clone();
     }
 }
