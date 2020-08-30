@@ -117,7 +117,7 @@ public class Student {
     }
 
     /**
-     * This method issues a book for the Student.
+     * This method issues a book for a Student.
      *
      * @param bookName   The name of the book to be issued.
      * @param authorName The name of author of the book to be issued.
@@ -132,7 +132,7 @@ public class Student {
     }
 
     /**
-     * This method returns a book which was issued by the Student.
+     * This method returns a book which was issued by a Student.
      *
      * @param bookName   The name of the book to be returned.
      * @param authorName The name of author of the book to be issued.
@@ -141,4 +141,13 @@ public class Student {
         System.out.println("Your book has been returned.");
         numberOfBookIssued--;
     }
+
+    /**
+     * This method lists down all the issued books of a Student.
+     */
+    public void showIssuedBooks() {
+        System.out.println("List of all your issued books: ");
+    }
+
+
 }
