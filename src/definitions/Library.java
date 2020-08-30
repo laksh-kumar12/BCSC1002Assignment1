@@ -20,14 +20,11 @@ public class Library {
     }
 
     public Library() {
-        this.availableBooks = new Book[50];
+        byte MAX_NUMBER_OF_BOOKS_IN_LIBRARY = 100;
+        this.availableBooks = new Book[MAX_NUMBER_OF_BOOKS_IN_LIBRARY];
         for (int bookNumber = 0; bookNumber < availableBooks.length; bookNumber++) {
             availableBooks[bookNumber] = new Book("book" + bookNumber, "author" + bookNumber, "973-0-7258-514-" + bookNumber);
         }
-    }
-
-    public Library(Book[] availableBooks) {
-        this.availableBooks = availableBooks;
     }
 
     @Override
