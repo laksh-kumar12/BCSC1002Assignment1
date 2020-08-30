@@ -7,6 +7,7 @@
 package definitions;
 
 public class Student {
+    private final byte MAX_NUMBER_OF_ISSUED_BOOKS = 10;
     private String firstName;
     private String middleName;
     private String lastName;
@@ -60,5 +61,23 @@ public class Student {
 
     public void setIssuedBooks(Book[] issuedBooks) {
         this.issuedBooks = issuedBooks;
+    }
+
+    public Student(String firstName, String middleName, String lastName, long studentRollNumber) {
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.studentRollNumber = studentRollNumber;
+        this.numberOfBookIssued = 0;
+        this.issuedBooks = new Book[MAX_NUMBER_OF_ISSUED_BOOKS];
+    }
+
+    public Student(String firstName, String lastName, long studentRollNumber) {
+        this.firstName = firstName;
+        this.middleName = "";
+        this.lastName = lastName;
+        this.studentRollNumber = studentRollNumber;
+        this.numberOfBookIssued = 0;
+        this.issuedBooks = new Book[MAX_NUMBER_OF_ISSUED_BOOKS];
     }
 }
