@@ -34,4 +34,10 @@ public class Book {
     public void setIsbnNumber(String isbnNumber) {
         this.isbnNumber = isbnNumber;
     }
+
+    public Book(String bookName, String authorName, String isbnNumber) {
+        this.bookName = bookName;
+        this.authorName = authorName;
+        this.isbnNumber = isbnNumber;
+    }
 }
