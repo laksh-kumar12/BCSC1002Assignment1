@@ -123,12 +123,7 @@ public class Student {
      * @param authorName The name of author of the book to be issued.
      */
     public void issueBook(String bookName, String authorName) {
-        if (numberOfBookIssued == MAX_NUMBER_OF_ISSUED_BOOKS) {
-            System.out.println("You have already issued 5 books. Please return at least 1 book in order to issue a new book.");
-        } else {
-            System.out.println("Your book has been issued.");
-            numberOfBookIssued++;
-        }
+        System.out.println("Your book has been issued.");
     }
 
     /**
@@ -138,12 +133,7 @@ public class Student {
      * @param authorName The name of author of the book to be issued.
      */
     public void returnBook(String bookName, String authorName) {
-        if (numberOfBookIssued > 0) {
-            System.out.println("Your book has been returned.");
-            numberOfBookIssued--;
-        } else {
-            System.out.println("You have not issued any book.");
-        }
+        System.out.println("Your book has been returned.");
     }
 
     /**
@@ -151,6 +141,24 @@ public class Student {
      */
     public void showIssuedBooks() {
         System.out.println("List of all your issued books: ");
+    }
+
+    /**
+     * This method informs whether a book can be issued or not.
+     *
+     * @return a boolean value
+     */
+    public boolean canBookBeIssued() {
+        return numberOfBookIssued != MAX_NUMBER_OF_ISSUED_BOOKS;
+    }
+
+    /**
+     * This method informs whether a book can be returned or not.
+     *
+     * @return a boolean value
+     */
+    public boolean canBookBeReturned() {
+        return numberOfBookIssued != 0;
     }
 
 }
